@@ -30,15 +30,28 @@ export default function Projects() {
           rel="noopener"
           className="reveal group flex flex-col gap-8 p-8 bg-surface border border-line rounded-[18px] text-ink relative overflow-hidden transition-all hover:-translate-y-1.5 hover:border-ink hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.2)]"
         >
-          {/* Top */}
-          <div className="flex justify-between items-center gap-4">
+          {/* Top row: Live badge + Tech stack on the right */}
+          <div className="flex justify-between items-start gap-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 font-mono text-[0.72rem] tracking-[0.08em] uppercase bg-ink text-bone rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-[#18a75a] shadow-[0_0_8px_#18a75a]" />
               Live
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 font-mono text-[0.72rem] tracking-[0.08em] uppercase bg-transparent text-muted border border-line-strong rounded-full">
-              React · Frontend
-            </span>
+
+            {/* Tech stack - top right */}
+            <div className="flex flex-col items-end gap-2">
+              <span className="inline-flex items-center gap-2 font-mono text-[0.72rem] tracking-[0.06em] uppercase text-muted">
+                React <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-4 h-4" />
+              </span>
+              <span className="inline-flex items-center gap-2 font-mono text-[0.72rem] tracking-[0.06em] uppercase text-muted">
+                JavaScript <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-4 h-4" />
+              </span>
+              <span className="inline-flex items-center gap-2 font-mono text-[0.72rem] tracking-[0.06em] uppercase text-muted">
+                MongoDB <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-4 h-4" />
+              </span>
+              <span className="inline-flex items-center gap-2 font-mono text-[0.72rem] tracking-[0.06em] uppercase text-muted">
+                Google OAuth <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google OAuth" className="w-4 h-4" />
+              </span>
+            </div>
           </div>
 
           {/* Body */}
@@ -55,7 +68,7 @@ export default function Projects() {
 
           {/* Bottom */}
           <div className="pt-4 border-t border-line">
-            <span className="inline-flex items-center gap-2.5 font-mono text-[0.8rem] tracking-[0.08em] uppercase text-ink transition-all group-hover:text-accent group-hover:gap-4">
+            <span className="inline-flex items-center gap-2.5 px-5 py-3 border border-accent rounded-full font-mono text-[0.8rem] tracking-[0.08em] uppercase text-ink transition-all group-hover:text-accent group-hover:gap-4">
               Bring me there <i className="fas fa-arrow-up-right-from-square" />
             </span>
           </div>
