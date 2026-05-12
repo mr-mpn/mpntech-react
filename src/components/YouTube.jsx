@@ -10,14 +10,14 @@ export default function YouTube() {
       className="reveal relative py-[clamp(5rem,10vw,9rem)] px-[clamp(1.25rem,3vw,3rem)] max-w-[1320px] mx-auto"
     >
       {/* Section head */}
-      <div className="max-w-[820px] mb-[clamp(3rem,6vw,5rem)]">
+      <div className="max-w-[820px] mx-auto text-center mb-[clamp(3rem,6vw,5rem)]">
         <span className="inline-block font-mono text-[0.78rem] uppercase tracking-[0.1em] text-accent mb-5">
           04 — Latest tutorial
         </span>
         <h2 className="font-display font-medium text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none tracking-[-0.03em] text-ink mb-5">
           Learn with me, on <em className="font-serif italic font-normal text-accent">YouTube</em>.
         </h2>
-        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed">
+        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed mx-auto">
           Stay updated with the latest cloud and AI technologies.
         </p>
       </div>

@@ -2,7 +2,7 @@ import { useReveal } from '../hooks/useReveal'
 
 const marqueeItems = [
   'AWS', 'Python', 'Terraform', 'Docker', 'AI / ML', 'Kubernetes',
-  'CI / CD', 'Lambda', 'CloudFront', 'DevOps', 'Security',
+  'CI / CD','RAG','LLM'
 ]
 
 export default function Hero() {
@@ -39,7 +39,7 @@ export default function Hero() {
           <div>
             <p className="flex items-center gap-3 font-mono text-[0.82rem] uppercase tracking-[0.08em] text-ink mb-4">
               <span className="w-7 h-px bg-ink inline-block" />
-              Mohammad Pakdast · Senior Cloud &amp; AI Developer
+              Mohammad Pakdast Nobari · Senior Fullstack &amp; AI Developer
             </p>
             <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[42ch] leading-relaxed">
               Delivering enterprise-grade AWS solutions, DevOps automation, and AI/ML implementations.

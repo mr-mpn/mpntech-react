@@ -95,8 +95,9 @@ body::before {
 .service-item::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -12px -16px;
   background: var(--color-ink);
+  border-radius: 14px;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.5s var(--ease-custom);

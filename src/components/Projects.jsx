@@ -10,20 +10,20 @@ export default function Projects() {
       className="relative py-[clamp(5rem,10vw,9rem)] px-[clamp(1.25rem,3vw,3rem)] max-w-[1320px] mx-auto"
     >
       {/* Section head */}
-      <div className="max-w-[820px] mb-[clamp(3rem,6vw,5rem)]">
+      <div className="max-w-[820px] mx-auto text-center mb-[clamp(3rem,6vw,5rem)]">
         <span className="inline-block font-mono text-[0.78rem] uppercase tracking-[0.1em] text-accent mb-5">
           03 — Selected work
         </span>
         <h2 className="font-display font-medium text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none tracking-[-0.03em] text-ink mb-5">
           Projects, shipped in the <em className="font-serif italic font-normal text-accent">wild</em>.
         </h2>
-        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed">
+        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed mx-auto">
           Real-world applications I've built and deployed.
         </p>
       </div>
 
       {/* Projects grid */}
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 max-w-[720px]">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 max-w-[720px] mx-auto">
         <a
           href="https://cinema-list-frontend-react-js.vercel.app/"
           target="_blank"

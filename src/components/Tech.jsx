@@ -10,6 +10,9 @@ const techItems = [
   { name: 'Node.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
   { name: 'JavaScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
   { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'OpenAI', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg' },
+  { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'MongoDB', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
 ]
 
 export default function Tech() {
@@ -23,20 +26,20 @@ export default function Tech() {
     >
       <div className="max-w-[1320px] mx-auto">
         {/* Section head */}
-        <div className="max-w-[820px] mb-[clamp(3rem,6vw,5rem)]">
+        <div className="max-w-[820px] mx-auto text-center mb-[clamp(3rem,6vw,5rem)]">
           <span className="inline-block font-mono text-[0.78rem] uppercase tracking-[0.1em] text-accent-2 mb-5">
             02 — Tech stack
           </span>
           <h2 className="font-display font-medium text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none tracking-[-0.03em] text-white mb-5">
             The tools behind the <em className="font-serif italic font-normal text-accent-2">craft</em>.
           </h2>
-          <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-white/60 max-w-[52ch] leading-relaxed">
+          <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-white/60 max-w-[52ch] leading-relaxed mx-auto">
             Battle-tested technologies I use daily to ship dependable systems.
           </p>
         </div>
 
         {/* Tech grid */}
-        <div className="grid grid-cols-5 gap-4 max-w-[1100px] max-[1000px]:grid-cols-3 max-[700px]:grid-cols-2">
+        <div className="grid grid-cols-5 gap-4 max-w-[1100px] mx-auto max-[1000px]:grid-cols-3 max-[700px]:grid-cols-2">
           {techItems.map((item, i) => (
             <div
               key={item.name}

@@ -7,17 +7,17 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="reveal relative py-[clamp(5rem,10vw,9rem)] px-[clamp(1.25rem,3vw,3rem)] max-w-[1320px] mx-auto text-left"
+      className="reveal relative py-[clamp(5rem,10vw,9rem)] px-[clamp(1.25rem,3vw,3rem)] max-w-[1320px] mx-auto text-center"
     >
       {/* Section head */}
-      <div className="max-w-[820px] mb-[clamp(3rem,6vw,5rem)]">
+      <div className="max-w-[820px] mx-auto text-center mb-[clamp(3rem,6vw,5rem)]">
         <span className="inline-block font-mono text-[0.78rem] uppercase tracking-[0.1em] text-accent mb-5">
           05 — Get in touch
         </span>
         <h2 className="font-display font-medium text-[clamp(2.2rem,5.5vw,4.5rem)] leading-none tracking-[-0.03em] text-ink mb-5">
           Let's build <em className="font-serif italic font-normal text-accent">something</em> great.
         </h2>
-        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed">
+        <p className="text-[clamp(1rem,1.15vw,1.1rem)] text-muted max-w-[52ch] leading-relaxed mx-auto">
           Ready to transform your business with professional cloud solutions?
         </p>
       </div>
@@ -34,7 +34,7 @@ export default function Contact() {
       </a>
 
       {/* Contact links */}
-      <div className="flex flex-wrap gap-3 mt-10">
+      <div className="flex flex-wrap gap-3 mt-10 justify-center">
         <a
           href="https://linkedin.com/in/mohammad-pakdast"
           target="_blank"
