@@ -6,7 +6,6 @@ import Tech from './components/Tech'
 import Projects from './components/Projects'
 import YouTube from './components/YouTube'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -28,7 +27,6 @@ export default function App() {
         <YouTube />
         <Contact />
       </main>
-      <Footer />
     </>
   )
 }

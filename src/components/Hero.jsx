@@ -32,7 +32,7 @@ export default function Hero() {
           <span className="hero-rotate-wrapper">
             <span ref={rotateRef} className={`hero-rotate ${animClass}`}>{words[index]}</span>
           </span>{' '}
-          solutions.
+          solutions
         </h1>
         <p className="hero-description">
           Senior Cloud & AI Developer — delivering enterprise-grade AWS solutions, DevOps automation, and AI/ML implementations.

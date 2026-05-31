@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { useVisibility } from '../hooks/useVisibility'
 
 const serviceData = [
-  { title: 'AWS Services', icon: 'fab fa-aws', label: 'AWS', items: ['Secure static site hosting (S3, CloudFront)', 'CI/CD pipelines with GitHub & CodePipeline', 'IAM, VPC, EC2, and Lambda setup'] },
+  { title: 'AWS Services', icon: 'fab fa-aws', label: 'AWS', items: ['Design and implement cloud native solutions for your business', 'Serverless design', 'Identity Access Management for security','Cost Optimization'] },
   { title: 'Cloud Infrastructure', icon: 'fas fa-cloud', label: 'Cloud', items: ['Architecture design & automation (Terraform)', 'Monitoring & logging with CloudWatch', 'Infrastructure as Code (IaC)'] },
-  { title: 'Network Security', icon: 'fas fa-shield-halved', label: 'Security', items: ['Security groups, firewalls, VPNs', 'Best practices for cloud hardening', 'SIEM fundamentals'] },
+  { title: 'Network Security', icon: 'fas fa-shield-halved', label: 'Security', items: ['Security groups, firewalls, VPNs', 'Best practices for cloud hardening'] },
   { title: 'Dockerized Applications', icon: 'fas fa-cube', label: 'Docker', items: ['Containerization for consistent deployment', 'Optimized development & production workflows', 'Docker Compose & orchestration basics'] },
-  { title: 'AI & Machine Learning', icon: 'fas fa-robot', label: 'AI & ML', items: ['AI APIs integration for smarter interfaces', 'Image generation, NLP, and chatbot tools', 'AI-driven user experience enhancement'] },
+  { title: 'AI & Machine Learning', icon: 'fas fa-robot', label: 'AI & ML', items: ['AI integration for smarter interfaces', 'Image generation, NLP, and chatbot tools', 'AI-driven user experience enhancement'] },
   { title: 'User Experience', icon: 'fas fa-users', label: 'UX', items: ['Recommender systems for personalized content', 'Web analytics integration for behavior insights', 'Performance optimization and A/B testing'] },
 ]
 
