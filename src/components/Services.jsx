@@ -10,9 +10,28 @@ const serviceData = [
   { title: 'User Experience', icon: 'fas fa-users', label: 'UX', items: ['Recommender systems for personalized content', 'Web analytics integration for behavior insights', 'Performance optimization and A/B testing'] },
 ]
 
+const COUNT = serviceData.length
+
 export default function Services() {
   const [active, setActive] = useState(null)
+  const [ringRotation, setRingRotation] = useState(0)
   const ref = useVisibility()
+
+  const handleClick = (i) => {
+    setActive(i)
+    const step = 360 / COUNT
+    // Target: ring must be at angle where icon i is at right (0°)
+    // Icon i is at baseAngle = step * i. Ring rotation needed = -(step * i) mod 360
+    const targetMod = (-(step * i) % 360 + 360) % 360 // 0..359, the "destination" mod 360
+    setRingRotation(prev => {
+      const currentMod = ((prev % 360) + 360) % 360 // where we are mod 360
+      // How much clockwise (negative) do we need to go?
+      // Clockwise means decreasing angle. Distance clockwise from currentMod to targetMod:
+      let clockwiseDist = (currentMod - targetMod + 360) % 360
+      if (clockwiseDist === 0) clockwiseDist = 360 // if same icon clicked, do full spin
+      return prev - clockwiseDist
+    })
+  }
 
   return (
     <section id="services" className="section" ref={ref}>
@@ -21,18 +40,27 @@ export default function Services() {
 
       <div className="services-layout">
         <div className="services-orbit">
-          <div className="orbit-ring">
-            {serviceData.map((s, i) => (
-              <div
-                key={i}
-                className={`orbit-icon${active === i ? ' active' : ''}`}
-                style={{ '--i': i }}
-                onClick={() => setActive(i)}
-              >
-                <i className={s.icon} />
-                <span>{s.label}</span>
-              </div>
-            ))}
+          <div className="orbit-ring" style={{ transform: `rotate(${ringRotation}deg)`, transition: 'transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1)' }}>
+            {serviceData.map((s, i) => {
+              const baseAngle = (360 / COUNT) * i
+              // Counter-rotate icon to keep it upright: negate both its base angle and the ring rotation
+              const counterRotation = -baseAngle - ringRotation
+              return (
+                <div
+                  key={i}
+                  className={`orbit-icon${active === i ? ' active' : ''}`}
+                  style={{
+                    '--i': i,
+                    transform: `rotate(${baseAngle}deg) translateX(230px) rotate(${counterRotation}deg)`,
+                    transition: 'transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1), border-color 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s',
+                  }}
+                  onClick={() => handleClick(i)}
+                >
+                  <i className={s.icon} />
+                  <span>{s.label}</span>
+                </div>
+              )
+            })}
           </div>
           <div className="orbit-center">mpntech</div>
         </div>

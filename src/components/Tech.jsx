@@ -1,15 +1,21 @@
 import { useVisibility } from '../hooks/useVisibility'
 
 const techs = [
-  { name: 'AWS', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg' },
+  { name: 'AWS', img: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg', invert: true },
   { name: 'Python', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'GitHub', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-  { name: 'Linux', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+  { name: 'GitHub', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', invert: true },
+  { name: 'Linux', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', invert: true },
   { name: 'Docker', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
   { name: 'React', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
   { name: 'Node.js', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
   { name: 'JavaScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
   { name: 'TypeScript', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'PostgreSQL', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'MongoDB', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+  { name: 'LangGraph', img: 'https://cdn.jsdelivr.net/npm/simple-icons@13/icons/langchain.svg', invert: true },
+  { name: 'LangChain', img: 'https://cdn.jsdelivr.net/npm/simple-icons@13/icons/langchain.svg', invert: true },
+  { name: 'LangSmith', img: 'https://cdn.jsdelivr.net/npm/simple-icons@13/icons/langchain.svg', invert: true },
+  { name: 'ChromaDB', img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
 ]
 
 export default function Tech() {
@@ -23,7 +29,7 @@ export default function Tech() {
       <div className="tech-grid">
         {techs.map(t => (
           <div key={t.name} className="tech-item">
-            <img src={t.img} alt={t.name} />
+            <img src={t.img} alt={t.name} className={t.invert ? 'invert' : ''} />
             <span>{t.name}</span>
           </div>
         ))}
